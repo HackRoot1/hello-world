@@ -2,7 +2,7 @@ version: 2
 jobs:
   one:
     docker:
-      - image:
+      - image: cimg/ruby:2.6.8
         auth:
           username: 230006
           password: hackRoot1
@@ -22,7 +22,7 @@ jobs:
      - run: sleep 15
 workflows: 
   version: 2
-  one_and_two
+  one_and_two:
     jobs:
       - one 
       - two
